@@ -448,9 +448,9 @@ static void event_cb_wifi_event(input_event_t *event, void *private_data)
 
 #define BUFFER_SIZE (12 * 1024)
 
-static int http_get(const char *hostname, const uint16_t port, const char *request, char *response)
+static int http_request(const char *hostname, const uint16_t port, const char *request, char *response)
 {
-    // 发出 HTTP GET 请求，将返回结果存入 response
+    // 发出 HTTP 请求，将返回结果存入 response
     // @param[in]  hostname 主机名
     // @param[in]  request  请求的报文
     // @param[out] response 返回的报文
@@ -569,9 +569,9 @@ long http_bili_GET(char *uid, char *datetime)
     memset(response_d, 0, BUFFER_SIZE);
 
     printf(">>>>>>>>>>>>Request bilibili<<<<<<<<<<<<\r\n");
-    error_code += http_get(hostname_b, 80, request_b, response_b);
+    error_code += http_request(hostname_b, 80, request_b, response_b);
     printf("\r\n>>>>>>>>>>>>Request datetime<<<<<<<<<<<<\r\n");
-    error_code += http_get(hostname_d, 80, request_d, response_d);
+    error_code += http_request(hostname_d, 80, request_d, response_d);
 
     if (error_code)
     {
