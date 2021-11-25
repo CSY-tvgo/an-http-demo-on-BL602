@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "======== make clean ========"
+make clean
+echo "======== make CONFIG_CHIP_NAME=BL602 CONFIG_LINK_ROM=1 -j ========"
+make CONFIG_CHIP_NAME=BL602 CONFIG_LINK_ROM=1 -j
+exit $?
+
