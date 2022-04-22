@@ -1,0 +1,1 @@
+cu -l /dev/ttyS5 --baud 2000000
