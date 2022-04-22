@@ -2,6 +2,10 @@
 
 这个仓库里存了几个博流 [BL-IoT-SDK](https://github.com/bouffalolab/bl_iot_sdk) 的使用示例，可供参考。  
 
+## 使用方法  
+下载 [BL-IoT-SDK](https://github.com/bouffalolab/bl_iot_sdk)，把本仓库内的项目的文件夹放入 `bl_iot_sdk/customer_app/get-start/`，然后可阅读 [BL-IoT-SDK Docs » 快速入门](https://bouffalolab.github.io/bl_iot_sdk/get-started/index_602.html) 中描述的方法来开始编译和烧写。  
+
+## 本仓库包含的例子  
 + ### [httpGETbilibili_test](./httpGETbilibili_test/)  
 
   用 BL602 发出 HTTP 请求的例子。  
